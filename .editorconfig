@@ -1,0 +1,12 @@
+# 读此文件
+root = true
+
+[*]
+charser = utf-8
+end_of_line = lf
+# tab = 2
+indent_size = 2
+indent_style = space
+# 新起一行
+insert_final_newline = true
+trim_trailing_whitespace = true

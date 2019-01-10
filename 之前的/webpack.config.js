@@ -110,3 +110,25 @@ if (isDev) {
 }
 
 module.exports = config
+
+var mult = (function(){
+  var cache = {};
+  var calculate = function(){ // 封闭 calculate 函数
+      var a = 1;
+      for(var i = 0, l = arguments.length; i < l; i++ ){
+            a = a * arguments[i];
+      };
+      return a;
+  }
+
+ return function(){
+      var args = Array.prototype.join.call( arguments, ',' );
+      // console.log(args);
+      console.log(cache);
+      // if ( args in cache ){
+      //     return cache[ args ];
+      // }
+      return cache[ args ] = calculate.apply( null, arguments );
+  }
+})();
+console.log( mult( 1,2,3 ) ); // 输出:6
