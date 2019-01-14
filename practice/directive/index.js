@@ -54,9 +54,6 @@ const app = new Vue({
       { name: 'xie', age: 16 },
       { name: 'liang', age: 18 }
     ]
-  },
-  directives: {
-
   }
 })
 

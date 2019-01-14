@@ -49,6 +49,7 @@ const app = new Vue({
   },
   // 在.vue文件下是不会调用这个的，
   // .vue文件会经过vue-laoder ，然后解析为render-function（效率更高）
+  // 执行在mounted && beforeMount
   render (h) {
     console.log('render function invoked')
     return h('div', {}, this.text)
@@ -56,7 +57,7 @@ const app = new Vue({
   // render (h) {
   //   throw new TypeError('render error')
   // },
-  // 对自身有用而已
+  // 对当前实例有用而已
   // renderError (h, err) {
   //   return h('div', {}, err.stack)
   // },

@@ -16,7 +16,7 @@ module.exports = (isDev) => {
 
     // 构建组件库，写说明用的
     // loader: { 'docs': docsLoader },
-    
+
     // 指定的loader加载之后，再加载
     // preLoader: { },
     // postLoader: {  }

@@ -1,11 +1,10 @@
 import Vue from 'vue'
 
 const app = new Vue({
-  // el: '#root',
   template: '<div>{{text}} {{obj.a}}</div>',
   data: {
     text: 0,
-    // 当对象的子类为空时，数据自身非响应式，需要
+    // 当对象的子类为空时，数据自身非响应式，需要其他数据引起响应
     obj: {}
   }
   // 自动注销
