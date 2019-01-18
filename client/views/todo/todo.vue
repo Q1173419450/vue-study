@@ -28,6 +28,28 @@ import Item from './item.vue'
 import Tabs from './tabs.vue'
 let id = 0
 export default {
+  // 点击时触发
+  beforeRouteEnter (to, from, next) {
+    console.log('todo before enter')
+    next(vm => {
+      console.log(vm)
+      // console.log(`after enter vm.id is ${vm.id}`)
+    })
+  },
+  // 同一个路由形式，不同id
+  // 当你既要控制跳转，又要控制数据更新时
+  beforeRouteUpdate (to, from, next) {
+    console.log(this)
+    console.log('todo before route update')
+    next()
+  },
+  // 离开时触发
+  beforeRouteLeave (to, from, next) {
+    console.log('todo before route leave')
+    if (global.confirm('are you sure')) {
+      next()
+    }
+  },
   props: ['id'],
   mounted () {
     // console.log(this.id)

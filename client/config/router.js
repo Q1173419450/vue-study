@@ -8,11 +8,12 @@ import routes from './routes'
 // })
 
 // export default router
+// 使用服务端渲染时，使用上面的方法，会内存溢出
 export default () => {
   return new Router({
     routes,
     // 去除地址的 #
-    mode: 'history',
+    mode: 'hash',
     // base: /base/,
     // 配置样式
     linkActiveClass: 'active-link',

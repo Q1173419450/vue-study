@@ -18,7 +18,7 @@ module.exports = (isDev) => {
     // loader: { 'docs': docsLoader },
 
     // 指定的loader加载之后，再加载
-    // preLoader: { },
-    // postLoader: {  }
+    // preLoader: {},
+    // postLoader: {}
   }
 }
